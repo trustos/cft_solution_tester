@@ -1,0 +1,4109 @@
+[
+	[
+		"loop1",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "loop1_entrypointloop",
+						"id": "657920116_1544803905_loop1_entrypointloop_default",
+						"next": {
+							"targetId": "audio6",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"loop1"
+								],
+								[
+									"count",
+									"forever"
+								]
+							],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"loop1_entrypointloop"
+								]
+							],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio6",
+						"id": "-1406804192_1544803905_audio6_default",
+						"next": {
+							"targetId": "loop1_exitpointloop",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"kø_Besked venteloop"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/Venteloop.wav"
+								]
+							],
+							"moduleId": "audio6",
+							"moduleName": "kø_Besked venteloop",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea Callflow - kø_Besked venteloop"
+								]
+							],
+							"moduleId": "audio6",
+							"moduleName": "kø_Besked venteloop",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop-exitpoint",
+							"propertyValues": [],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"loop1_exitpointloop"
+								]
+							],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"queue",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "queue_entrypointqueue",
+						"id": "-1653699515_1544803905_queue_entrypointqueue_default",
+						"next": {
+							"targetId": "audio4",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"Regnskab"
+								],
+								[
+									"count",
+									null
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue_entrypointqueue"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio4",
+						"id": "-1406804194_1544803905_audio4_default",
+						"next": {
+							"targetId": "if",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Kømelding 1 - Regnskab"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/1_ledige_medarbejder.wav"
+								]
+							],
+							"moduleId": "audio4",
+							"moduleName": "Kømelding 1 - Regnskab",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Kømelding 1 - Regnskab"
+								]
+							],
+							"moduleId": "audio4",
+							"moduleName": "Kømelding 1 - Regnskab",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio5",
+						"id": "-1406804193_1544803905_audio5_default",
+						"next": {
+							"targetId": "audio8",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Kømelding 3 - CB_offer Again"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/CB_offer_Again.wav"
+								]
+							],
+							"moduleId": "audio5",
+							"moduleName": "Kømelding 3 - CB_offer Again",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Kømelding 3 - CB_offer Again"
+								]
+							],
+							"moduleId": "audio5",
+							"moduleName": "Kømelding 3 - CB_offer Again",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "true",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "true",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "if",
+						"id": "3357_3569038_if_true",
+						"next": {
+							"targetId": "variable1",
+							"target": "3",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "false",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "false",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "if",
+						"id": "3357_97196323_if_false",
+						"next": {
+							"targetId": "loop1",
+							"target": "2",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "if",
+							"propertyValues": [
+								[
+									"name",
+									"Callback"
+								],
+								[
+									"expression",
+									"$callback_allowed=yes"
+								],
+								[
+									"notexpression",
+									null
+								],
+								[
+									"hasCustomExpression",
+									false
+								],
+								[
+									"value1",
+									"$callback_allowed"
+								],
+								[
+									"value2",
+									"yes"
+								],
+								[
+									"condition",
+									"="
+								],
+								[
+									"ifType",
+									"if"
+								],
+								[
+									"valueVariableOptions",
+									[
+										{
+											"key": "$system_queue_time",
+											"name": "Caller's waiting time in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "Caller's number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_place",
+											"name": "Current place in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_estimate",
+											"name": "Estimated time remaing in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_secret_caller",
+											"name": "Caller has a secret number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_accessno",
+											"name": "The number of this service",
+											"type": "globalvar"
+										},
+										{
+											"key": "$callback_aktiv",
+											"name": "callback_aktiv",
+											"type": "uservar"
+										},
+										{
+											"key": "$callback_allowed",
+											"name": "callback_allowed",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_originating",
+											"name": "ciq_originating",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "ciq_destination",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_iqid",
+											"name": "ciq_iqid",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_ringing_timeout",
+											"name": "ciq_ringing_timeout",
+											"type": "uservar"
+										}
+									]
+								],
+								[
+									"customExpression",
+									null
+								]
+							],
+							"moduleId": "if",
+							"moduleName": "Callback",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "if",
+							"propertyValues": [],
+							"moduleId": "if",
+							"moduleName": "Callback",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "loop1",
+						"id": "103157261_1544803905_loop1_default",
+						"next": {
+							"targetId": "queue_entertainer_end",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop",
+							"propertyValues": [
+								[
+									"name",
+									"loop1"
+								]
+							],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop",
+							"propertyValues": [],
+							"moduleId": "loop1",
+							"moduleName": "loop1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "variable1",
+						"id": "-82477771_1544803905_variable1_default",
+						"next": {
+							"targetId": "audio7",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"Callback true"
+								],
+								[
+									"variable",
+									"callback_aktiv"
+								],
+								[
+									"value",
+									"true"
+								]
+							],
+							"moduleId": "variable1",
+							"moduleName": "Callback true",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "variable1",
+							"moduleName": "Callback true",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio7",
+						"id": "-1406804191_1544803905_audio7_default",
+						"next": {
+							"targetId": "audio5",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Kømelding 2"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/Ko_G1_1.wav"
+								]
+							],
+							"moduleId": "audio7",
+							"moduleName": "Kømelding 2",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Kømelding 2"
+								]
+							],
+							"moduleId": "audio7",
+							"moduleName": "Kømelding 2",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio8",
+						"id": "-1406804190_1544803905_audio8_default",
+						"next": {
+							"targetId": "audio9",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Kømelding 4"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/Ko_G1_2.wav"
+								]
+							],
+							"moduleId": "audio8",
+							"moduleName": "Kømelding 4",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Kømelding 4"
+								]
+							],
+							"moduleId": "audio8",
+							"moduleName": "Kømelding 4",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "audio9",
+						"id": "-1406804189_1544803905_audio9_default",
+						"next": {
+							"targetId": "loop1",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Kømelding 5 - CB_offer Again1"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/CB_offer_Again.wav"
+								]
+							],
+							"moduleId": "audio9",
+							"moduleName": "Kømelding 5 - CB_offer Again1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Kømelding 5 - CB_offer Again1"
+								]
+							],
+							"moduleId": "audio9",
+							"moduleName": "Kømelding 5 - CB_offer Again1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue_exitpointqueue"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"callback",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "callback_entrypoint",
+						"id": "1895337112_1544803905_callback_entrypoint_default",
+						"next": {
+							"targetId": "callback1_orginiatingNumber1",
+							"target": "2",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "content-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"callback"
+								],
+								[
+									"expression",
+									null
+								]
+							],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "content-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"callback_entrypoint"
+								]
+							],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback1_orginiatingNumber1",
+						"id": "-1853514420_1544803905_callback1_orginiatingNumber1_default",
+						"next": {
+							"targetId": "callback1_requestId1",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"callback1 - Set originating number1"
+								],
+								[
+									"variable",
+									"ciq_originating"
+								],
+								[
+									"value",
+									"$system_accessno"
+								]
+							],
+							"moduleId": "callback1_orginiatingNumber1",
+							"moduleName": "callback1 - Set originating number1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "callback1_orginiatingNumber1",
+							"moduleName": "callback1 - Set originating number1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "true",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "true",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_ifSecret",
+						"id": "193973479_3569038_callback_ifSecret_true",
+						"next": {
+							"targetId": "callback_callerInputPreferredNumber",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "false",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "false",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_ifSecret",
+						"id": "193973479_97196323_callback_ifSecret_false",
+						"next": {
+							"targetId": "callback_callerInputPreferredNumber",
+							"target": "2",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "if",
+							"propertyValues": [
+								[
+									"name",
+									"callback - The caller has a secret number"
+								],
+								[
+									"expression",
+									"$system_secret_caller=no"
+								],
+								[
+									"notexpression",
+									null
+								],
+								[
+									"hasCustomExpression",
+									false
+								],
+								[
+									"value1",
+									"$system_secret_caller"
+								],
+								[
+									"value2",
+									"no"
+								],
+								[
+									"condition",
+									"="
+								],
+								[
+									"ifType",
+									"if"
+								],
+								[
+									"valueVariableOptions",
+									[
+										{
+											"key": "$system_queue_time",
+											"name": "Caller's waiting time in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "Caller's number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_place",
+											"name": "Current place in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_estimate",
+											"name": "Estimated time remaing in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_secret_caller",
+											"name": "Caller has a secret number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_accessno",
+											"name": "The number of this service",
+											"type": "globalvar"
+										},
+										{
+											"key": "$callback_aktiv",
+											"name": "callback_aktiv",
+											"type": "uservar"
+										},
+										{
+											"key": "$callback_allowed",
+											"name": "callback_allowed",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_originating",
+											"name": "ciq_originating",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "ciq_destination",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_iqid",
+											"name": "ciq_iqid",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_ringing_timeout",
+											"name": "ciq_ringing_timeout",
+											"type": "uservar"
+										}
+									]
+								],
+								[
+									"customExpression",
+									null
+								]
+							],
+							"moduleId": "callback_ifSecret",
+							"moduleName": "callback - The caller has a secret number",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "if",
+							"propertyValues": [],
+							"moduleId": "callback_ifSecret",
+							"moduleName": "callback - The caller has a secret number",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_callerInputPreferredNumber",
+						"id": "-812794267_1544803905_callback_callerInputPreferredNumber_default",
+						"next": {
+							"targetId": "callback_audioReadNumberBack",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "caller-input",
+							"propertyValues": [
+								[
+									"name",
+									"callback - Enter preferred number"
+								],
+								[
+									"ndigits",
+									"8"
+								],
+								[
+									"timeout",
+									"10s"
+								],
+								[
+									"max_timeouts",
+									"2"
+								],
+								[
+									"variable",
+									"ciq_destination"
+								],
+								[
+									"isTimeoutExitVisible",
+									false
+								],
+								[
+									"src",
+									"/11954/ControlAudio/tast_nr_callback.wav"
+								]
+							],
+							"moduleId": "callback_callerInputPreferredNumber",
+							"moduleName": "callback - Enter preferred number",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "caller-input",
+							"propertyValues": [
+								[
+									"mask_digits",
+									"no"
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - callback - Enter preferred number"
+								]
+							],
+							"moduleId": "callback_callerInputPreferredNumber",
+							"moduleName": "callback - Enter preferred number",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_audioReadNumberBack",
+						"id": "-536015742_1544803905_callback_audioReadNumberBack_default",
+						"next": {
+							"targetId": "callback_audioEnteredNumber",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"callback - Read number back"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/preconf_callback.wav"
+								]
+							],
+							"moduleId": "callback_audioReadNumberBack",
+							"moduleName": "callback - Read number back",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - callback - Read number back"
+								]
+							],
+							"moduleId": "callback_audioReadNumberBack",
+							"moduleName": "callback - Read number back",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_audioEnteredNumber",
+						"id": "1018379684_1544803905_callback_audioEnteredNumber_default",
+						"next": {
+							"targetId": "callback_audioSilence",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"callback - (entered number)"
+								],
+								[
+									"src",
+									"$ciq_destination"
+								]
+							],
+							"moduleId": "callback_audioEnteredNumber",
+							"moduleName": "callback - (entered number)",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - callback - (entered number)"
+								]
+							],
+							"moduleId": "callback_audioEnteredNumber",
+							"moduleName": "callback - (entered number)",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_audioSilence",
+						"id": "1988867493_1544803905_callback_audioSilence_default",
+						"next": {
+							"targetId": "callback_menuConfirmNumber",
+							"target": "3",
+							"source": "s2"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"callback - (silence)"
+								],
+								[
+									"src",
+									"silence"
+								]
+							],
+							"moduleId": "callback_audioSilence",
+							"moduleName": "callback - (silence)",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									"1s"
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - callback - (silence)"
+								]
+							],
+							"moduleId": "callback_audioSilence",
+							"moduleName": "callback - (silence)",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"key": "1",
+						"value": "",
+						"type": "choice",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "1. ",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_menuConfirmNumber",
+						"id": "-1887564400_48547_callback_menuConfirmNumber_1.",
+						"next": {
+							"targetId": "callback_scriptCallback",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"key": "2",
+						"value": "",
+						"type": "choice",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "2. ",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_menuConfirmNumber",
+						"id": "-1887564400_49508_callback_menuConfirmNumber_2.",
+						"next": {
+							"targetId": "callback_callerInputPreferredNumber",
+							"target": "2",
+							"source": "s2"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_menuConfirmNumber",
+						"id": "-1887564400_1544803905_callback_menuConfirmNumber_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "menu",
+							"propertyValues": [
+								[
+									"name",
+									"callback - Confirm number"
+								],
+								[
+									"timeout",
+									"10s"
+								],
+								[
+									"max_errors",
+									null
+								],
+								[
+									"max_timeouts",
+									"2"
+								],
+								[
+									"stat_id",
+									null
+								],
+								[
+									"stat_add",
+									"true"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/conf_callback.wav"
+								],
+								[
+									"exitsJson",
+									"[]"
+								]
+							],
+							"moduleId": "callback_menuConfirmNumber",
+							"moduleName": "callback - Confirm number",
+							"isSelected": true
+						}
+					],
+					[
+						"Keys",
+						{
+							"tabName": "Keys",
+							"moduleType": "menu",
+							"propertyValues": [
+								[
+									"ndigits",
+									"1"
+								],
+								[
+									"choicesJson",
+									"[[\"1\",\"\"],[\"2\",\"\"]]"
+								],
+								[
+									"areChoicesDuplicate",
+									false
+								]
+							],
+							"moduleId": "callback_menuConfirmNumber",
+							"moduleName": "callback - Confirm number",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "menu",
+							"propertyValues": [
+								[
+									"variable",
+									null
+								],
+								[
+									"mask_digits",
+									"no"
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_content",
+									null
+								],
+								[
+									"name",
+									"callback - Confirm number"
+								],
+								[
+									"cc_label",
+									"Ikea - callback - Confirm number"
+								],
+								[
+									"isChoiceExisted",
+									false
+								]
+							],
+							"moduleId": "callback_menuConfirmNumber",
+							"moduleName": "callback - Confirm number",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback_scriptCallback",
+						"id": "-164792982_1544803905_callback_scriptCallback_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "2",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "script",
+							"propertyValues": [
+								[
+									"name",
+									"callback - Order Callback"
+								],
+								[
+									"script",
+									"<mir id=\"callback_mir_saveciq\" method=\"SaveCiq\" timeout=\"30s\"><in variable=\"requestId\" value=\"$system_iqid\" type=\"webservice\"/><in variable=\"systemVariables\" value=\"$system_variables\" type=\"webservice\"/><in variable=\"maxRetries\" value=\"3\" type=\"webservice\"/><in variable=\"secBetweenRetries\" value=\"30\" type=\"webservice\"/><in variable=\"ciqType\" value=\"1\" type=\"webservice\"/><in variable=\"callbackNumber\" value=\"$ciq_destination\" type=\"webservice\"/><in variable=\"exist\" value=\"true\" type=\"webservice\"/><out variable=\"result\" type=\"webservice\"/><default><switch variable=\"$(result)\"><case value=\"Exist\"><audio src=\"\"/></case><case value=\"OK\"><audio src=\"/11954/ControlAudio/info_callback.wav\"/></case></switch></default></mir>"
+								]
+							],
+							"moduleId": "callback_scriptCallback",
+							"moduleName": "callback - Order Callback",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "script",
+							"propertyValues": [],
+							"moduleId": "callback_scriptCallback",
+							"moduleName": "callback - Order Callback",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback1_requestId1",
+						"id": "-1577989382_1544803905_callback1_requestId1_default",
+						"next": {
+							"targetId": "callback1_ringingTimeout1",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"callback1 - Set request ID1"
+								],
+								[
+									"variable",
+									"ciq_iqid"
+								],
+								[
+									"value",
+									"$system_iqid"
+								]
+							],
+							"moduleId": "callback1_requestId1",
+							"moduleName": "callback1 - Set request ID1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "callback1_requestId1",
+							"moduleName": "callback1 - Set request ID1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback1_ringingTimeout1",
+						"id": "-1939122417_1544803905_callback1_ringingTimeout1_default",
+						"next": {
+							"targetId": "callback_ifSecret",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"callback1 - Set ringing timeout1"
+								],
+								[
+									"variable",
+									"ciq_ringing_timeout"
+								],
+								[
+									"value",
+									"30s"
+								]
+							],
+							"moduleId": "callback1_ringingTimeout1",
+							"moduleName": "callback1 - Set ringing timeout1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "callback1_ringingTimeout1",
+							"moduleName": "callback1 - Set ringing timeout1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "content-exitpoint",
+							"propertyValues": [],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "content-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"callback_exitpoint"
+								]
+							],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"rootnode",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "rootnode",
+						"id": "-166072860_1544803905_rootnode_default",
+						"next": {
+							"targetId": "script",
+							"target": "2",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "service",
+							"propertyValues": [
+								[
+									"name",
+									"Start module"
+								],
+								[
+									"enableCallout",
+									true
+								]
+							],
+							"moduleId": "rootnode",
+							"moduleName": "Start module",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "service",
+							"propertyValues": [
+								[
+									"hide_dtmf",
+									null
+								],
+								[
+									"immediate_answer",
+									""
+								],
+								[
+									"trace_level",
+									null
+								],
+								[
+									"tone_detection_mode",
+									null
+								],
+								[
+									"time_to_live",
+									null
+								],
+								[
+									"initialScript",
+									"<assign variable=\"callback_aktiv\" value=\"false\"/><assign variable=\"callback_allowed\" value=\"no\"/>"
+								],
+								[
+									"finallyScript",
+									null
+								]
+							],
+							"moduleId": "rootnode",
+							"moduleName": "Start module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "70808267",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_-1629896116_switch_70808267",
+						"next": {
+							"targetId": "time",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "70808501",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_-1629893425_switch_70808501",
+						"next": {
+							"targetId": "time",
+							"target": "1",
+							"source": "s3"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_1544803905_switch_default",
+						"next": {
+							"targetId": "time",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "switch",
+							"propertyValues": [
+								[
+									"name",
+									"B-Num Switch"
+								],
+								[
+									"variable",
+									"$system_accessno"
+								],
+								[
+									"exitsJson",
+									"[\"70808267\",\"70808501\"]"
+								],
+								[
+									"areCasesDuplicate",
+									false
+								]
+							],
+							"moduleId": "switch",
+							"moduleName": "B-Num Switch",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "switch",
+							"propertyValues": [],
+							"moduleId": "switch",
+							"moduleName": "B-Num Switch",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"name": "Åben",
+						"type": "time",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Åben",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_5966246_time_Åben",
+						"next": {
+							"targetId": "ccswitch",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"name": "Lukket",
+						"type": "time",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Lukket",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_-2007806152_time_Lukket",
+						"next": {
+							"targetId": "audio",
+							"target": "2",
+							"source": "s2"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_1544803905_time_default",
+						"next": {
+							"targetId": "audio",
+							"target": "2",
+							"source": "s2"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"id",
+									"time"
+								],
+								[
+									"name",
+									"time_Regnskab "
+								],
+								[
+									"src",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - time_Regnskab "
+								],
+								[
+									"kml",
+									{
+										"type": "element",
+										"name": "time",
+										"attr": {
+											"id": "time",
+											"name": "time_Regnskab ",
+											"cc_label": "Ikea - time_Regnskab "
+										},
+										"tags": [
+											{
+												"type": "element",
+												"name": "times",
+												"tags": [
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "weekday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "newyearsday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "maundythursday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "goodfriday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "eastersunday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "eastermonday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "greatprayerday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "ascensionday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "whitsunday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "whitmonday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "christmasday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "boxingday",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "constitutionday_dk",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "christmaseve",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													},
+													{
+														"type": "element",
+														"name": "entry",
+														"attr": {
+															"day": "newyearseve",
+															"time": "0000-2359",
+															"exit": "Lukket"
+														}
+													}
+												]
+											},
+											{
+												"type": "element",
+												"name": "exit",
+												"attr": {
+													"next": "ccswitch",
+													"name": "Åben",
+													"description": "Åben"
+												}
+											},
+											{
+												"type": "element",
+												"name": "exit",
+												"attr": {
+													"next": "audio",
+													"name": "Lukket",
+													"description": "Lukket"
+												}
+											},
+											{
+												"type": "element",
+												"name": "default",
+												"attr": {
+													"next": "audio",
+													"description": "default"
+												}
+											}
+										]
+									}
+								],
+								[
+									"isDefaultExitVisible",
+									true
+								],
+								[
+									"exitsJson",
+									"[{\"name\":\"Åben\",\"description\":\"Åben\",\"isTimeEntryExit\":false},{\"name\":\"Lukket\",\"description\":\"Lukket\",\"isTimeEntryExit\":true}]"
+								],
+								[
+									"timeModule",
+									{}
+								],
+								[
+									"sharedTimeModule",
+									{}
+								],
+								[
+									"moduleMode",
+									"local"
+								],
+								[
+									"srcExitsEntriesJson",
+									""
+								],
+								[
+									"areExitsDuplicate",
+									false
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "time_Regnskab ",
+							"isSelected": true
+						}
+					],
+					[
+						"Opening Hours",
+						{
+							"tabName": "Opening Hours",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"src",
+									null
+								],
+								[
+									"timeEntriesJson",
+									"[{\"day\":\"weekday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"newyearsday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"maundythursday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"goodfriday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"eastersunday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"eastermonday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"greatprayerday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"ascensionday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"whitsunday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"whitmonday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"christmasday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"boxingday\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"constitutionday_dk\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"christmaseve\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"},{\"day\":\"newyearseve\",\"time\":\"0000-2359\",\"exit\":\"Lukket\"}]"
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "time_Regnskab ",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"ct_label",
+									null
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "time_Regnskab ",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "audio",
+						"id": "93166550_1544803905_audio_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Regnskab Lukket"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/2021REGNLUK.wav"
+								]
+							],
+							"moduleId": "audio",
+							"moduleName": "Regnskab Lukket",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Regnskab Lukket"
+								]
+							],
+							"moduleId": "audio",
+							"moduleName": "Regnskab Lukket",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "audio1",
+						"id": "-1406804197_1544803905_audio1_default",
+						"next": {
+							"targetId": "queue",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Regnskab Velkomst"
+								],
+								[
+									"src",
+									"/11954/ControlAudio/info_welcome_regnaaben.wav"
+								]
+							],
+							"moduleId": "audio1",
+							"moduleName": "Regnskab Velkomst",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"Ikea - Regnskab Velkomst"
+								]
+							],
+							"moduleId": "audio1",
+							"moduleName": "Regnskab Velkomst",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"expression": "callback_aktiv=true",
+						"dtmf": "1",
+						"type": "interrupt",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Interrupt: \"1\"",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "queue",
+						"id": "107944209_1447594090_queue_Interrupt:\"1\"",
+						"next": {
+							"targetId": "callback",
+							"target": "3",
+							"source": "s3"
+						}
+					},
+					{
+						"tag_name": "cancel",
+						"type": "cancel",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "cancel",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "queue",
+						"id": "107944209_-1367724422_queue_cancel",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Regnskab"
+								],
+								[
+									"queue_key",
+									"q64_regnskab"
+								],
+								[
+									"hascustomentertainer",
+									"false"
+								],
+								[
+									"exitsJson",
+									"[{\"type\":\"interrupt\",\"text\":\"Interrupt: \\\"1\\\"\",\"dtmf\":\"1\",\"expression\":\"callback_aktiv=true\",\"presDataApplied\":false},{\"type\":\"cancel\",\"text\":\"cancel\"}]"
+								],
+								[
+									"valueVariableOptions",
+									[
+										{
+											"key": "$system_queue_time",
+											"name": "Caller's waiting time in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "Caller's number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_place",
+											"name": "Current place in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_estimate",
+											"name": "Estimated time remaing in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_secret_caller",
+											"name": "Caller has a secret number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_accessno",
+											"name": "The number of this service",
+											"type": "globalvar"
+										},
+										{
+											"key": "$callback_aktiv",
+											"name": "callback_aktiv",
+											"type": "uservar"
+										},
+										{
+											"key": "$callback_allowed",
+											"name": "callback_allowed",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_originating",
+											"name": "ciq_originating",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "ciq_destination",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_iqid",
+											"name": "ciq_iqid",
+											"type": "uservar"
+										},
+										{
+											"key": "$ciq_ringing_timeout",
+											"name": "ciq_ringing_timeout",
+											"type": "uservar"
+										}
+									]
+								],
+								[
+									"areInterruptExitsDuplicate",
+									false
+								],
+								[
+									"queueInfoList",
+									[
+										"__CALLOUT_FROM_SMS",
+										"__CALLOUT_JAN",
+										"__CALLOUT_NTS",
+										"__recordingControl",
+										"broadcast",
+										"chat_sales",
+										"chat_support",
+										"chat_test",
+										"dfafd",
+										"dfasdsss",
+										"hot_stand_by",
+										"Q_EMAIL_SALES",
+										"Q_EMAIL_SUPPORT",
+										"Q_P_JAN_SALES",
+										"Q_P_JAN_SUPPORT",
+										"Q_PERSONAL",
+										"Q_SMS2IVR",
+										"Q_TACO",
+										"QFacebook",
+										"QFacebookPrivate",
+										"QFacebookPublic",
+										"testaaa"
+									]
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": true
+						}
+					],
+					[
+						"Messages",
+						{
+							"tabName": "Messages",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Regnskab"
+								],
+								[
+									"entertainer",
+									"No custom entertainer!"
+								],
+								[
+									"hascustomentertainer",
+									false
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"ct_label",
+									"Ikea Callflow - Regnskab"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Regnskab",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": false
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "variable",
+						"id": "-1249586564_1544803905_variable_default",
+						"next": {
+							"targetId": "audio1",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"Callback allowed"
+								],
+								[
+									"variable",
+									"callback_allowed"
+								],
+								[
+									"value",
+									"yes"
+								]
+							],
+							"moduleId": "variable",
+							"moduleName": "Callback allowed",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "variable",
+							"moduleName": "Callback allowed",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Deaktiv",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch",
+						"id": "1813576596_-1089830858_ccswitch_Deaktiv",
+						"next": {
+							"targetId": "audio1",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Aktiv",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch",
+						"id": "1813576596_63331351_ccswitch_Aktiv",
+						"next": {
+							"targetId": "variable",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch",
+						"id": "1813576596_1544803905_ccswitch_default",
+						"next": {
+							"targetId": "audio1",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "ccswitch",
+							"propertyValues": [
+								[
+									"name",
+									"Callback Regnskab"
+								],
+								[
+									"ndigits",
+									null
+								],
+								[
+									"timeout",
+									"59s"
+								],
+								[
+									"max_timeouts",
+									null
+								],
+								[
+									"isTimeoutExitVisible",
+									false
+								],
+								[
+									"isStandaloneExitVisible",
+									false
+								],
+								[
+									"propertyKey",
+									"Callback q64_Regnskab"
+								],
+								[
+									"refreshCounter",
+									0
+								],
+								[
+									"serviceVariablesJson",
+									"[{\"key\":\"dd#0102_Internett\",\"displayKey\":\"0102_Internett\",\"currentValue\":\"Alltid apen\",\"values\":[\"Alltid apen\",\"Normale apningstider\",\"Alltid stengt\"]},{\"key\":\"dd#0102_Telefoni\",\"displayKey\":\"0102_Telefoni\",\"currentValue\":\"Kabelbrudd\",\"values\":[\"Av\",\"Kabelbrudd\",\"Feil i faktura\"]},{\"key\":\"dd#0102_TV\",\"displayKey\":\"0102_TV\",\"currentValue\":\"Oppgradering\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"Arbeid i gata\"]},{\"key\":\"dd#0103_Telefoni\",\"displayKey\":\"0103_Telefoni\",\"currentValue\":\"Oppgradering\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"på\",\"gata\"]},{\"key\":\"dd#0103_TV\",\"displayKey\":\"0103_TV\",\"currentValue\":\"Av\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"testing\",\"påæ\",\"zzz\"]},{\"key\":\"dd#alena_test\",\"displayKey\":\"alena_test\",\"currentValue\":\"value1\",\"values\":[\"value1\",\"newSel\",\"val1new\",\"val2new\"]},{\"key\":\"dd#Callback LF Flyt\",\"displayKey\":\"Callback LF Flyt\",\"currentValue\":\"abc\",\"values\":[\"abc\",\"default\",\"erewrwe\"]},{\"key\":\"dd#for test av filter\",\"displayKey\":\"for test av filter\",\"currentValue\":\"11\",\"values\":[\"11\",\"2\",\"3\"]},{\"key\":\"dd#nummer fem\",\"displayKey\":\"nummer fem\",\"currentValue\":\"2\",\"values\":[\"2\",\"6\"]},{\"key\":\"dd#OpeningHours_Key\",\"displayKey\":\"OpeningHours_Key\",\"currentValue\":\"weekday\",\"values\":[\"Open\",\"Closed\",\"weekend\",\"weekday\",\"654exit\",\"aihf45897\"]},{\"key\":\"dd#test_æ_ø_å\",\"displayKey\":\"test_æ_ø_å\",\"currentValue\":\"blerghæ\",\"values\":[\"blerghæ\",\"blerghø\",\"blerghãö\"]},{\"key\":\"dd#z\",\"displayKey\":\"z\",\"currentValue\":\"zzzzzzz\",\"values\":[\"zzzzzzz\"]}]"
+								]
+							],
+							"moduleId": "ccswitch",
+							"moduleName": "Callback Regnskab",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "ccswitch",
+							"propertyValues": [],
+							"moduleId": "ccswitch",
+							"moduleName": "Callback Regnskab",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": false
+			},
+			{
+				"exits": [],
+				"tabs": [],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "callback",
+						"id": "-172220347_1544803905_callback_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "content",
+							"propertyValues": [
+								[
+									"name",
+									"callback"
+								]
+							],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "content",
+							"propertyValues": [],
+							"moduleId": "callback",
+							"moduleName": "callback",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "script",
+						"id": "-907685685_1544803905_script_default",
+						"next": {
+							"targetId": "switch",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "script",
+							"propertyValues": [
+								[
+									"name",
+									"Log Call"
+								],
+								[
+									"script",
+									"<mir id=\"Log_Call\" timeout=\"30s\" method=\"LogCall\"><in variable=\"phoneNumber\" value=\"$ciq_destination\"/><in variable=\"xsltUri\" value=\"http://cs.prod.consorte.com/Common/MIR/LogCall/crmdb_return_v1.xslt\"/><out variable=\"result\"/><out variable=\"crmKml\"/><default><switch variable=\"result\"><case value=\"OK\"><include variable=\"crmKml\"/><assign variable=\"crmKml\" value=\"\"/></case></switch></default></mir>"
+								]
+							],
+							"moduleId": "script",
+							"moduleName": "Log Call",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "script",
+							"propertyValues": [],
+							"moduleId": "script",
+							"moduleName": "Log Call",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	]
+]
