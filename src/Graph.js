@@ -32,13 +32,9 @@ function MyCustomGraph () {
 		const canvas = Array.from(tiny);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
-
-		console.log(nodes, connectors);
-
-
-
-		// console.log(data);
-
+		
+		//If contains modulename_EntryPoint_something - start new circle based on current modules coordinates
+		//Until id contains modulename_ExitPoint_something
 
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
