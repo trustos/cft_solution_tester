@@ -1,17 +1,19 @@
 {
-  "name": "cft_solution_tester",
-  "version": "1.0.0",
-  "description": "CFT Solution Tester",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.3"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.0.23"
-  }
+	"name": "cft_solution_tester",
+	"version": "1.0.0",
+	"description": "CFT Solution Tester",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js && npm run tailwind",
+		"tailwind": "npx tailwindcss -i ./src/tailwind_input.css -o ./public/css/tailwind_output.css --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.3"
+	},
+	"devDependencies": {
+		"tailwindcss": "^3.0.23"
+	}
 }
