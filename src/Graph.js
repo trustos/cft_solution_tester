@@ -10,6 +10,7 @@ import * as ikea from './mock_data/small_11954_Ikea_DK.json';
 import * as latest from './mock_data/latest_mock.json';
 import * as demo from './mock_data/demo_callflow.json';
 import * as latest_latest from './mock_data/latest_latest_mock.json';
+import * as allNodesKML from './mock_data/allNodesKML.json';
 
 function MyCustomGraph () {
 	const sigma = useSigma();
