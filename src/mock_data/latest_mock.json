@@ -1,0 +1,2162 @@
+[
+	[
+		"queue",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "queue_entrypointqueue",
+						"id": "-1653699515_1544803905_queue_entrypointqueue_default",
+						"next": {
+							"targetId": "inline",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 1"
+								],
+								[
+									"count",
+									null
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue_entrypointqueue"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue_entertainer_end",
+						"moduleId": "inline",
+						"id": "-1183997287_1544803905_inline_default",
+						"next": {
+							"targetId": "queue_entertainer_end",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "inline",
+							"propertyValues": [
+								[
+									"name",
+									"Inline Entertainer"
+								],
+								[
+									"targetId",
+									"loop"
+								],
+								[
+									"ascendantQueueId",
+									"queue"
+								],
+								[
+									"notAllowedTargetTypes",
+									[
+										"unknown",
+										"service",
+										"notes",
+										"content-entrypoint",
+										"content-exitpoint",
+										"loop-entrypoint",
+										"loop-exitpoint",
+										"queue-entrypoint",
+										"queue-exitpoint"
+									]
+								]
+							],
+							"moduleId": "inline",
+							"moduleName": "Inline Entertainer",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "inline",
+							"propertyValues": [
+								[
+									"useResult",
+									false
+								],
+								[
+									"isErrorExitVisible",
+									false
+								]
+							],
+							"moduleId": "inline",
+							"moduleName": "Inline Entertainer",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue_exitpointqueue"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"queue1",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "queue1_entrypointqueue",
+						"id": "-440189324_1544803905_queue1_entrypointqueue_default",
+						"next": {
+							"targetId": "inline1",
+							"target": "2",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 2"
+								],
+								[
+									"count",
+									null
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue1_entrypointqueue"
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "queue1_entertainer_end",
+						"moduleId": "inline1",
+						"id": "1950789816_1544803905_inline1_default",
+						"next": {
+							"targetId": "queue1_entertainer_end",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "inline",
+							"propertyValues": [
+								[
+									"name",
+									"Inline Entertainer1"
+								],
+								[
+									"targetId",
+									"loop"
+								],
+								[
+									"ascendantQueueId",
+									"queue1"
+								],
+								[
+									"notAllowedTargetTypes",
+									[
+										"unknown",
+										"service",
+										"notes",
+										"content-entrypoint",
+										"content-exitpoint",
+										"loop-entrypoint",
+										"loop-exitpoint",
+										"queue-entrypoint",
+										"queue-exitpoint"
+									]
+								]
+							],
+							"moduleId": "inline1",
+							"moduleName": "Inline Entertainer1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "inline",
+							"propertyValues": [
+								[
+									"useResult",
+									false
+								],
+								[
+									"isErrorExitVisible",
+									false
+								]
+							],
+							"moduleId": "inline1",
+							"moduleName": "Inline Entertainer1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"queue1_exitpointqueue"
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"loop",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"moduleId": "loop_entrypointloop",
+						"id": "942487293_1544803905_loop_entrypointloop_default",
+						"next": {
+							"targetId": "variable",
+							"target": "1",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop-entrypoint",
+							"propertyValues": [
+								[
+									"name",
+									"Entertainer"
+								],
+								[
+									"count",
+									"forever"
+								]
+							],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop-entrypoint",
+							"propertyValues": [
+								[
+									"id",
+									"loop_entrypointloop"
+								]
+							],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "variable",
+						"id": "-1249586564_1544803905_variable_default",
+						"next": {
+							"targetId": "audio1",
+							"target": "3",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"name",
+									"Variable Module"
+								],
+								[
+									"variable",
+									"foo"
+								],
+								[
+									"value",
+									"bar"
+								]
+							],
+							"moduleId": "variable",
+							"moduleName": "Variable Module",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "variable",
+							"propertyValues": [
+								[
+									"restricted",
+									null
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"variable_type",
+									""
+								]
+							],
+							"moduleId": "variable",
+							"moduleName": "Variable Module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "audio1",
+						"id": "-1406804197_1544803905_audio1_default",
+						"next": {
+							"targetId": "loop_exitpointloop",
+							"target": "2",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Entertainer Audio"
+								],
+								[
+									"src",
+									"/JAN/ControlAudio/1.wav"
+								]
+							],
+							"moduleId": "audio1",
+							"moduleName": "Entertainer Audio",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"hackathon test - Entertainer Audio"
+								]
+							],
+							"moduleId": "audio1",
+							"moduleName": "Entertainer Audio",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop-exitpoint",
+							"propertyValues": [],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop-exitpoint",
+							"propertyValues": [
+								[
+									"id",
+									"loop_exitpointloop"
+								]
+							],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	],
+	[
+		"rootnode",
+		[
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "rootnode",
+						"id": "-166072860_1544803905_rootnode_default",
+						"next": {
+							"targetId": "switch",
+							"target": "2",
+							"source": "s4"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "service",
+							"propertyValues": [
+								[
+									"name",
+									"Start module"
+								],
+								[
+									"enableCallout",
+									true
+								]
+							],
+							"moduleId": "rootnode",
+							"moduleName": "Start module",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "service",
+							"propertyValues": [
+								[
+									"hide_dtmf",
+									null
+								],
+								[
+									"immediate_answer",
+									""
+								],
+								[
+									"trace_level",
+									null
+								],
+								[
+									"tone_detection_mode",
+									null
+								],
+								[
+									"time_to_live",
+									null
+								],
+								[
+									"initialScript",
+									"<assign variable=\"eh_wav_hold\" value=\"channel1\"/><assign variable=\"eh_wav_ciq_failed\" value=\"/SYSTEM/wav/UK/CCCT/female/ciq_failed.wav\"/><assign variable=\"eh_wav_unavailable\" value=\"/SYSTEM/wav/UK/CCCT/female/ciq_unavailable.wav\"/><assign variable=\"eh_wav_caller_hangup\" value=\"/SYSTEM/wav/UK/CCCT/female/caller_hangup.wav\"/><assign variable=\"eh_wav_ciq_call_caller\" value=\"/SYSTEM/wav/UK/CCCT/female/ciq_call_caller.wav\"/><assign variable=\"eh_wav_caller_hangup_continue\" value=\"/SYSTEM/wav/UK/CCCT/female/caller_hangup_continue.wav\"/><assign variable=\"eh_wav_transferee_unavailable\" value=\"/SYSTEM/wav/UK/CCCT/female/transferee_unavailable.wav\"/><assign variable=\"eh_wav_transferee_screened\" value=\"/SYSTEM/wav/UK/CCCT/female/transferee_screened.wav\"/><assign variable=\"eh_continue_on_caller_hangup\" value=\"true\"/><assign variable=\"eh_conferance_activated\" value=\"false\"/><assign variable=\"system_numbers\" value=\"/SYSTEM/wav/UK/num/female\"/><if expression=\"system_is_out_of_the_blue=true\"><if expression=\"call_type=Callback\"><assign variable=\"call_type\" value=\"Callback\"/><else><assign variable=\"call_type\" value=\"Outbound\"/></else></if><else><assign variable=\"call_type\" value=\"Inbound\"/></else></if><assign variable=\"extrali.date\" value=\"$dateformat($system_datetime,yyyyMMdd)\"/><assign variable=\"CatalogSearch.phoneNumber\" value=\"$system_caller_ano\"/><assign variable=\"CatalogSearch.userId\" value=\"438191\"/><include src=\"/Common/PuzzelAPI/CatalogSearch/CatalogSearch.xml\"/>"
+								],
+								[
+									"finallyScript",
+									null
+								]
+							],
+							"moduleId": "rootnode",
+							"moduleName": "Start module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "1234",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_1509442_switch_1234",
+						"next": {
+							"targetId": "time",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "5678",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_1632578_switch_5678",
+						"next": {
+							"targetId": "ccswitch1",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "2468",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_1541252_switch_2468",
+						"next": {
+							"targetId": "call",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "switch",
+						"id": "-889473228_1544803905_switch_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "switch",
+							"propertyValues": [
+								[
+									"name",
+									"Switch Module"
+								],
+								[
+									"variable",
+									"$system_accessno"
+								],
+								[
+									"exitsJson",
+									"[\"1234\",\"5678\",\"2468\"]"
+								],
+								[
+									"areCasesDuplicate",
+									false
+								]
+							],
+							"moduleId": "switch",
+							"moduleName": "Switch Module",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "switch",
+							"propertyValues": [],
+							"moduleId": "switch",
+							"moduleName": "Switch Module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"tag_name": "cancel",
+						"type": "cancel",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "cancel",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "queue",
+						"id": "107944209_-1367724422_queue_cancel",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 1"
+								],
+								[
+									"queue_key",
+									"chat_sales"
+								],
+								[
+									"hascustomentertainer",
+									"false"
+								],
+								[
+									"exitsJson",
+									"[{\"type\":\"cancel\",\"text\":\"cancel\"}]"
+								],
+								[
+									"valueVariableOptions",
+									[
+										{
+											"key": "$system_queue_time",
+											"name": "Caller's waiting time in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "Caller's number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_place",
+											"name": "Current place in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_estimate",
+											"name": "Estimated time remaing in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_secret_caller",
+											"name": "Caller has a secret number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_accessno",
+											"name": "The number of this service",
+											"type": "globalvar"
+										},
+										{
+											"key": "$foo",
+											"name": "foo",
+											"type": "uservar"
+										}
+									]
+								],
+								[
+									"areInterruptExitsDuplicate",
+									false
+								],
+								[
+									"queueInfoList",
+									[
+										"__CALLOUT_FROM_SMS",
+										"__CALLOUT_JAN",
+										"__CALLOUT_NTS",
+										"__recordingControl",
+										"broadcast",
+										"chat_sales",
+										"chat_support",
+										"chat_test",
+										"dfafd",
+										"dfasdsss",
+										"hot_stand_by",
+										"Q_EMAIL_SALES",
+										"Q_EMAIL_SUPPORT",
+										"Q_P_JAN_SALES",
+										"Q_P_JAN_SUPPORT",
+										"Q_PERSONAL",
+										"Q_SMS2IVR",
+										"Q_TACO",
+										"QFacebook",
+										"QFacebookPrivate",
+										"QFacebookPublic",
+										"testaaa"
+									]
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": true
+						}
+					],
+					[
+						"Messages",
+						{
+							"tabName": "Messages",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 1"
+								],
+								[
+									"entertainer",
+									"No custom entertainer!"
+								],
+								[
+									"hascustomentertainer",
+									false
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"ct_label",
+									"hackathon test - Queue 1"
+								]
+							],
+							"moduleId": "queue",
+							"moduleName": "Queue 1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"name": "Open",
+						"type": "time",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Open",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_2464362_time_Open",
+						"next": {
+							"targetId": "queue",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"name": "Closed",
+						"type": "time",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "Closed",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_2021313932_time_Closed",
+						"next": {
+							"targetId": "audio",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "time",
+						"id": "3560141_1544803905_time_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"id",
+									"time"
+								],
+								[
+									"name",
+									"Time Module"
+								],
+								[
+									"src",
+									null
+								],
+								[
+									"cc_label",
+									"hackathon test - Time Module"
+								],
+								[
+									"kml",
+									{
+										"type": "element",
+										"name": "time",
+										"attr": {
+											"id": "time",
+											"name": "Time Module",
+											"cc_label": "hackathon test - Time Module"
+										},
+										"tags": [
+											{
+												"type": "element",
+												"name": "times"
+											},
+											{
+												"type": "element",
+												"name": "exit",
+												"attr": {
+													"next": "queue",
+													"name": "Open",
+													"description": "Open"
+												}
+											},
+											{
+												"type": "element",
+												"name": "exit",
+												"attr": {
+													"next": "audio",
+													"name": "Closed",
+													"description": "Closed"
+												}
+											},
+											{
+												"type": "element",
+												"name": "default",
+												"attr": {
+													"next": "terminate",
+													"description": "default"
+												}
+											}
+										]
+									}
+								],
+								[
+									"isDefaultExitVisible",
+									true
+								],
+								[
+									"exitsJson",
+									"[{\"name\":\"Open\",\"description\":\"Open\",\"isTimeEntryExit\":false},{\"name\":\"Closed\",\"description\":\"Closed\",\"isTimeEntryExit\":false}]"
+								],
+								[
+									"timeModule",
+									{}
+								],
+								[
+									"sharedTimeModule",
+									{}
+								],
+								[
+									"moduleMode",
+									"local"
+								],
+								[
+									"srcExitsEntriesJson",
+									""
+								],
+								[
+									"areExitsDuplicate",
+									false
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "Time Module",
+							"isSelected": true
+						}
+					],
+					[
+						"Opening Hours",
+						{
+							"tabName": "Opening Hours",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"src",
+									null
+								],
+								[
+									"timeEntriesJson",
+									"[]"
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "Time Module",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "time",
+							"propertyValues": [
+								[
+									"ct_label",
+									null
+								]
+							],
+							"moduleId": "time",
+							"moduleName": "Time Module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "audio",
+						"id": "93166550_1544803905_audio_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": false
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"name",
+									"Closed Message"
+								],
+								[
+									"src",
+									"/JAN/ControlAudio/02 News.wav"
+								]
+							],
+							"moduleId": "audio",
+							"moduleName": "Closed Message",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "audio",
+							"propertyValues": [
+								[
+									"format",
+									null
+								],
+								[
+									"timeout",
+									null
+								],
+								[
+									"conid",
+									""
+								],
+								[
+									"ct_label",
+									null
+								],
+								[
+									"cc_label",
+									"hackathon test - Closed Message"
+								]
+							],
+							"moduleId": "audio",
+							"moduleName": "Closed Message",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "2",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch1",
+						"id": "386299677_50_ccswitch1_2",
+						"next": {
+							"targetId": "queue1",
+							"target": "2",
+							"source": "s2"
+						}
+					},
+					{
+						"type": "case",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "6",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch1",
+						"id": "386299677_54_ccswitch1_6",
+						"next": {
+							"targetId": "audio",
+							"target": "2",
+							"source": "s3"
+						}
+					},
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "ccswitch1",
+						"id": "386299677_1544803905_ccswitch1_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "ccswitch",
+							"propertyValues": [
+								[
+									"name",
+									"ccswitch1"
+								],
+								[
+									"ndigits",
+									null
+								],
+								[
+									"timeout",
+									"59s"
+								],
+								[
+									"max_timeouts",
+									null
+								],
+								[
+									"isTimeoutExitVisible",
+									false
+								],
+								[
+									"isStandaloneExitVisible",
+									false
+								],
+								[
+									"propertyKey",
+									"nummer fem"
+								],
+								[
+									"refreshCounter",
+									0
+								],
+								[
+									"serviceVariablesJson",
+									"[{\"key\":\"dd#0102_Internett\",\"displayKey\":\"0102_Internett\",\"currentValue\":\"Alltid apen\",\"values\":[\"Alltid apen\",\"Normale apningstider\",\"Alltid stengt\"]},{\"key\":\"dd#0102_Telefoni\",\"displayKey\":\"0102_Telefoni\",\"currentValue\":\"Kabelbrudd\",\"values\":[\"Av\",\"Kabelbrudd\",\"Feil i faktura\"]},{\"key\":\"dd#0102_TV\",\"displayKey\":\"0102_TV\",\"currentValue\":\"Oppgradering\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"Arbeid i gata\"]},{\"key\":\"dd#0103_Telefoni\",\"displayKey\":\"0103_Telefoni\",\"currentValue\":\"Oppgradering\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"på\",\"gata\"]},{\"key\":\"dd#0103_TV\",\"displayKey\":\"0103_TV\",\"currentValue\":\"Av\",\"values\":[\"Av\",\"Kabelbrudd\",\"Oppgradering\",\"Feil i faktura\",\"testing\",\"påæ\",\"zzz\"]},{\"key\":\"dd#alena_test\",\"displayKey\":\"alena_test\",\"currentValue\":\"value1\",\"values\":[\"value1\",\"newSel\",\"val1new\",\"val2new\"]},{\"key\":\"dd#Callback LF Flyt\",\"displayKey\":\"Callback LF Flyt\",\"currentValue\":\"abc\",\"values\":[\"abc\",\"default\",\"erewrwe\"]},{\"key\":\"dd#for test av filter\",\"displayKey\":\"for test av filter\",\"currentValue\":\"11\",\"values\":[\"11\",\"2\",\"3\"]},{\"key\":\"dd#nummer fem\",\"displayKey\":\"nummer fem\",\"currentValue\":\"2\",\"values\":[\"2\",\"6\"]},{\"key\":\"dd#OpeningHours_Key\",\"displayKey\":\"OpeningHours_Key\",\"currentValue\":\"weekday\",\"values\":[\"Open\",\"Closed\",\"weekend\",\"weekday\",\"654exit\",\"aihf45897\"]},{\"key\":\"dd#test_æ_ø_å\",\"displayKey\":\"test_æ_ø_å\",\"currentValue\":\"blerghæ\",\"values\":[\"blerghæ\",\"blerghø\",\"blerghãö\"]},{\"key\":\"dd#z\",\"displayKey\":\"z\",\"currentValue\":\"zzzzzzz\",\"values\":[\"zzzzzzz\"]}]"
+								]
+							],
+							"moduleId": "ccswitch1",
+							"moduleName": "ccswitch1",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "ccswitch",
+							"propertyValues": [],
+							"moduleId": "ccswitch1",
+							"moduleName": "ccswitch1",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"tag_name": "cancel",
+						"type": "cancel",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "cancel",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "queue1",
+						"id": "-948696768_-1367724422_queue1_cancel",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 2"
+								],
+								[
+									"queue_key",
+									"chat_sales"
+								],
+								[
+									"hascustomentertainer",
+									"false"
+								],
+								[
+									"exitsJson",
+									"[{\"type\":\"cancel\",\"text\":\"cancel\"}]"
+								],
+								[
+									"valueVariableOptions",
+									[
+										{
+											"key": "$system_queue_time",
+											"name": "Caller's waiting time in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$ciq_destination",
+											"name": "Caller's number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_place",
+											"name": "Current place in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_queue_estimate",
+											"name": "Estimated time remaing in queue",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_secret_caller",
+											"name": "Caller has a secret number",
+											"type": "globalvar"
+										},
+										{
+											"key": "$system_accessno",
+											"name": "The number of this service",
+											"type": "globalvar"
+										},
+										{
+											"key": "$foo",
+											"name": "foo",
+											"type": "uservar"
+										}
+									]
+								],
+								[
+									"areInterruptExitsDuplicate",
+									false
+								],
+								[
+									"queueInfoList",
+									[
+										"__CALLOUT_FROM_SMS",
+										"__CALLOUT_JAN",
+										"__CALLOUT_NTS",
+										"__recordingControl",
+										"broadcast",
+										"chat_sales",
+										"chat_support",
+										"chat_test",
+										"dfafd",
+										"dfasdsss",
+										"hot_stand_by",
+										"Q_EMAIL_SALES",
+										"Q_EMAIL_SUPPORT",
+										"Q_P_JAN_SALES",
+										"Q_P_JAN_SUPPORT",
+										"Q_PERSONAL",
+										"Q_SMS2IVR",
+										"Q_TACO",
+										"QFacebook",
+										"QFacebookPrivate",
+										"QFacebookPublic",
+										"testaaa"
+									]
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": true
+						}
+					],
+					[
+						"Messages",
+						{
+							"tabName": "Messages",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"name",
+									"Queue 2"
+								],
+								[
+									"entertainer",
+									"No custom entertainer!"
+								],
+								[
+									"hascustomentertainer",
+									false
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": false
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "queue",
+							"propertyValues": [
+								[
+									"ct_label",
+									"hackathon test - Queue 2"
+								]
+							],
+							"moduleId": "queue1",
+							"moduleName": "Queue 2",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"tag_name": "changup",
+						"type": "simple",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "hangup",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "call",
+						"id": "3045982_-1224574323_call_hangup",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						}
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "call",
+							"propertyValues": [
+								[
+									"name",
+									"Call Module"
+								],
+								[
+									"destination",
+									"246810"
+								],
+								[
+									"isBusyExitVisible",
+									false
+								],
+								[
+									"isNoAnswerExitVisible",
+									false
+								]
+							],
+							"moduleId": "call",
+							"moduleName": "Call Module",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "call",
+							"propertyValues": [
+								[
+									"originating",
+									""
+								],
+								[
+									"ringing_timeout",
+									null
+								],
+								[
+									"ct_label",
+									null
+								]
+							],
+							"moduleId": "call",
+							"moduleName": "Call Module",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			},
+			{
+				"exits": [
+					{
+						"_DEFAULT_SOURCE_ANCHOR": "s4",
+						"type": "default",
+						"sourceEndPoints": [
+							{
+								"endPointType": "s2",
+								"params": [
+									0,
+									0.5,
+									-1,
+									0,
+									0,
+									0,
+									"left"
+								]
+							},
+							{
+								"endPointType": "s3",
+								"params": [
+									1,
+									0.5,
+									1,
+									0,
+									0,
+									0,
+									"right"
+								]
+							}
+						],
+						"text": "default",
+						"exitDefaultTarget": "terminate",
+						"moduleId": "loop",
+						"id": "3327652_1544803905_loop_default",
+						"next": {
+							"targetId": "terminate",
+							"target": "1",
+							"source": "s3"
+						},
+						"_isVisible": true
+					}
+				],
+				"tabs": [
+					[
+						"Basic",
+						{
+							"tabName": "Basic",
+							"moduleType": "loop",
+							"propertyValues": [
+								[
+									"name",
+									"Entertainer"
+								]
+							],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": true
+						}
+					],
+					[
+						"Advanced",
+						{
+							"tabName": "Advanced",
+							"moduleType": "loop",
+							"propertyValues": [],
+							"moduleId": "loop",
+							"moduleName": "Entertainer",
+							"isSelected": false
+						}
+					]
+				],
+				"isValid": true
+			}
+		]
+	]
+]
