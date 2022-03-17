@@ -21,29 +21,20 @@ function MyCustomGraph () {
 		const canvas = Array.from(demo);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
-
-		const entertainers = {
-			'queue': {
-				"type": "entertainer_end",
-				"name": "queue_entertainer_end",
-				"id": "queue_entertainer_end",
-				"isValid": true
-			}, 
-			'queue1': {
-				"type": "entertainer_end",
-				"name": "queue1_entertainer_end",
-				"id": "queue1_entertainer_end",
-				"isValid": true
-			}
-		};
-
 		const parsedNodes = nodes.map(node => node);
 		parsedNodes.forEach((node, idx) => {
 
 			if (node.type === 'queue-exitpoint') {
 				const queueName = node.id.split('_')[0];
-				if (!parsedNodes.filter(node => node.id === entertainers[queueName].id).length) {
-					parsedNodes.splice(idx - 1, 0, entertainers[queueName]);
+				const idValue = queueName + "_entertainer_end";
+				const queueDefaultEndNode = {
+					"type": "entertainer_end",
+					"name": idValue,
+					"id": idValue,
+					"isValid": true
+				};
+				if (!parsedNodes.filter(node => node.id === idValue).length) {
+					parsedNodes.splice(idx, 0, queueDefaultEndNode);
 				}
 			}
 		});
@@ -56,7 +47,7 @@ function MyCustomGraph () {
 			size: 30
 		})
 
-		let newRadius = 60;
+		let newRadius = 90;
 		parsedNodes.forEach((node, idx) => {
 
 			if (node.id.includes('_entrypoint')) {
