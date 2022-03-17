@@ -1,40 +1,23 @@
 import { useEffect } from "react";
-import {useSigma, useLoadGraph} from "react-sigma-v2";
+import {useSigma} from "react-sigma-v2";
 import Parser from "./lib/parser";
-import {MultiGraph, UndirectedGraph} from 'graphology';
 
-// import erdosRenyi from "graphology-generators/random/erdos-renyi";
+import * as all from './mock_data/all_modules_demo.json';
 import * as tiny from './mock_data/tiny_edited.json';
+import * as jysk from './mock_data/average_31726_JyskNordic_CSC_DK.json';
+import * as grj from './mock_data/average_60051_Great_Rail_Journeys.json';
+import * as ikea from './mock_data/small_11954_Ikea_DK.json';
+import * as latest_latest from './mock_data/latest_latest_mock.json';
 
 function MyCustomGraph () {
 	const sigma = useSigma();
-	const loadGraph = useLoadGraph();
-
-	// const settings = {multi: true};
-	// const graph = new MultiGraph();
-
-	console.log(sigma);
-
-	// console.log(tiny);
-
-	// tiny.forEach(arr => console.log(arr));
-
-	// console.log(tiny);
-	// const canvas = Array.from(tiny);
-	// const parser = new Parser(canvas);
-	// const data = parser.parse();
-
+	const isStartNode = (node, connectors) => connectors.filter(connector => connector.target === node.id).length === 0;
 
 	useEffect(() => {
 		const graph = sigma.getGraph();
-		// const graph = new MultiGraph();
-		// const graph = erdosRenyi(MultiGraph, { order: 100, probability: 0.2 });
-		const canvas = Array.from(tiny);
+		const canvas = Array.from(latest_latest);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
-		
-		//If contains modulename_EntryPoint_something - start new circle based on current modules coordinates
-		//Until id contains modulename_ExitPoint_something
 
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
@@ -44,8 +27,10 @@ function MyCustomGraph () {
 			size: 30
 		})
 
-		let newRadius = 30;
+		let newRadius = 50;
 		nodes.forEach((node, idx) => {
+
+			console.log(node);
 
 			if (node.id.includes('_entrypoint')) {
 				newRadius += 5;
@@ -58,19 +43,26 @@ function MyCustomGraph () {
 			const x = newRadius * Math.cos(Math.PI * 2 * idx / nodes.length );
 			const y = newRadius * Math.sin(Math.PI * 2 * idx / nodes.length );
 
+			//Default node size
+			let size = 15;
+
+			if (isStartNode(node, connectors)) {
+				size = 30;
+			}
+
+			const green = '#378805';
+			const red = '#FF0000';
+
 			graph.addNode(node.id, 
 				{
-					label: node.name,
+					label: `[${node.type}] ${node.name}`,
 					x, 
 					y,
-					color: node.isValid ? '#00FF00' : '#FF0000',
-					size: 20
+					color: node.isValid ? green : red,
+					size
 				}
 			);
 		});
-
-		// graph('terminate', {})
-
 		
 		connectors.forEach((connector, idx) => {
 
@@ -84,17 +76,9 @@ function MyCustomGraph () {
 			}
 
 			graph.addEdge(connector.source, connector.target, { color, size: 5, label: connector.type, type });
-		})
-		// console.log(graph);
-		// loadGraph(graph);
-
-		// graph.addNode("Jessica", { label: "Jessica2", x: -1, y: -1, color: "#FF0", size: 100 });
-		// graph.addNode("Truman", { label: "Truman", x: 0, y: 0, color: "#00F", size: 50 });
-		// graph.addNode("Washington", { label: "Washington", x: 2, y: 2, color: "#00F", size: 50 });
-		// graph.addEdge("Jessica", "Truman", { color: "#0f0f0f", size: 25, label: 'Connection', type: 'arrow' });
+		});
 	}, []);
-
-	// return <></>;
+	
 	return <></>;
   };
 
