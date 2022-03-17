@@ -31,6 +31,18 @@ export class Parser {
         moduleList.forEach(module => {
             // node creation 
             let node = this.createNode(module);
+
+            if (node.type === 'queue-exitpoint') {
+                const queueName = node.id.split('_')[0];
+                const idValue = queueName + "_entertainer_end";
+                nodes.push({
+                    "type": "entertainer_end",
+                    "name": idValue,
+                    "id": idValue,
+                    "isValid": true
+                });
+            }
+
             nodes.push(node);
 
             //connectors creation 

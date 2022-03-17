@@ -22,22 +22,6 @@ function MyCustomGraph () {
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
 		const parsedNodes = nodes.map(node => node);
-		parsedNodes.forEach((node, idx) => {
-
-			if (node.type === 'queue-exitpoint') {
-				const queueName = node.id.split('_')[0];
-				const idValue = queueName + "_entertainer_end";
-				const queueDefaultEndNode = {
-					"type": "entertainer_end",
-					"name": idValue,
-					"id": idValue,
-					"isValid": true
-				};
-				if (!parsedNodes.filter(node => node.id === idValue).length) {
-					parsedNodes.splice(idx, 0, queueDefaultEndNode);
-				}
-			}
-		});
 
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
@@ -56,10 +40,12 @@ function MyCustomGraph () {
 			//radiusChange = (idx / nodes.length);
 			radiusChange = nodes.length * (idx / nodes.length);
 			newRadius = 3 * nodeSize + radiusChange;
+			//newRadius = 3 * nodeSize + radiusChange;
 
 			if (node.id && node.id.includes('_entrypoint')) {
 				//newRadius += nodeSize * nodes.length;
-				newRadius += radiusChange;
+				//newRadius += radiusChange;
+				newRadius += nodeSize/2;
 			//	newRadius += (2 * (idx / nodes.length));//7;
 			}
 
@@ -78,7 +64,8 @@ function MyCustomGraph () {
 
 
 			if (node.id && node.id.includes('_exitpoint')) {
-				newRadius -= radiusChange;
+				newRadius -= nodeSize / 2;
+				//newRadius -= radiusChange;
 				//	newRadius -= (2 * (idx / nodes.length));//7;
 			}
 
