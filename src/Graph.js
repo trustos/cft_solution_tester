@@ -8,6 +8,7 @@ import * as jysk from './mock_data/average_31726_JyskNordic_CSC_DK.json';
 import * as grj from './mock_data/average_60051_Great_Rail_Journeys.json';
 import * as ikea from './mock_data/small_11954_Ikea_DK.json';
 import * as latest from './mock_data/latest_mock.json';
+import * as demo from './mock_data/demo_callflow.json';
 import * as latest_latest from './mock_data/latest_latest_mock.json';
 
 function MyCustomGraph () {
@@ -17,7 +18,7 @@ function MyCustomGraph () {
 
 	useEffect(() => {
 		const graph = sigma.getGraph();
-		const canvas = Array.from(latest);
+		const canvas = Array.from(demo);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
 
