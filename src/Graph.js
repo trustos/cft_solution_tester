@@ -12,7 +12,8 @@ import * as latest_latest from './mock_data/latest_latest_mock.json';
 
 function MyCustomGraph () {
 	const sigma = useSigma();
-	const isStartNode = (node, connectors) => connectors.filter(connector => connector.target === node.id).length === 0;
+	//const isStartNode = (node, connectors) => connectors.filter(connector => connector.target === node.id).length === 0;
+	const isStartNode = (node) => node.id === 'rootnode';
 
 	useEffect(() => {
 		const graph = sigma.getGraph();
@@ -54,7 +55,7 @@ function MyCustomGraph () {
 			size: 30
 		})
 
-		let newRadius = 50;
+		let newRadius = 60;
 		parsedNodes.forEach((node, idx) => {
 
 			if (node.id.includes('_entrypoint')) {
@@ -65,8 +66,10 @@ function MyCustomGraph () {
 				newRadius -= 5;
 			}
 
-			const x = newRadius * Math.cos(Math.PI * 2 * idx / nodes.length );
-			const y = newRadius * Math.sin(Math.PI * 2 * idx / nodes.length );
+			//const x = newRadius * Math.cos(Math.PI * 2 * idx / nodes.length );
+			//const y = newRadius * Math.sin(Math.PI * 2 * idx / nodes.length );
+			const x = newRadius * Math.cos(Math.PI * 1.6 * idx / nodes.length );
+			const y = newRadius * Math.sin(Math.PI * 1.6 * idx / nodes.length );
 
 			//Default node size
 			let size = 15;
