@@ -66,8 +66,6 @@ function MyCustomGraph () {
 				newRadius -= 5;
 			}
 
-			//const x = newRadius * Math.cos(Math.PI * 2 * idx / nodes.length );
-			//const y = newRadius * Math.sin(Math.PI * 2 * idx / nodes.length );
 			const x = newRadius * Math.cos(Math.PI * 1.6 * idx / nodes.length );
 			const y = newRadius * Math.sin(Math.PI * 1.6 * idx / nodes.length );
 
