@@ -7,6 +7,7 @@ import * as tiny from './mock_data/tiny_edited.json';
 import * as jysk from './mock_data/average_31726_JyskNordic_CSC_DK.json';
 import * as grj from './mock_data/average_60051_Great_Rail_Journeys.json';
 import * as ikea from './mock_data/small_11954_Ikea_DK.json';
+import * as latest from './mock_data/latest_mock.json';
 import * as latest_latest from './mock_data/latest_latest_mock.json';
 
 function MyCustomGraph () {
@@ -15,9 +16,35 @@ function MyCustomGraph () {
 
 	useEffect(() => {
 		const graph = sigma.getGraph();
-		const canvas = Array.from(latest_latest);
+		const canvas = Array.from(latest);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
+
+		const entertainers = {
+			'queue': {
+				"type": "queue_entertainer_end",
+				"name": "queue_entertainer_end",
+				"id": "queue_entertainer_end",
+				"isValid": true
+			}, 
+			'queue1': {
+				"type": "queue1_entertainer_end",
+				"name": "queue1_entertainer_end",
+				"id": "queue1_entertainer_end",
+				"isValid": true
+			}
+		};
+
+		const parsedNodes = nodes.map(node => node);
+		parsedNodes.forEach((node, idx) => {
+
+			if (node.type === 'queue-exitpoint') {
+				const queueName = node.id.split('_')[0];
+				if (!parsedNodes.filter(node => node.id === entertainers[queueName].id).length) {
+					parsedNodes.splice(idx - 1, 0, entertainers[queueName]);
+				}
+			}
+		});
 
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
@@ -28,9 +55,7 @@ function MyCustomGraph () {
 		})
 
 		let newRadius = 50;
-		nodes.forEach((node, idx) => {
-
-			console.log(node);
+		parsedNodes.forEach((node, idx) => {
 
 			if (node.id.includes('_entrypoint')) {
 				newRadius += 5;
