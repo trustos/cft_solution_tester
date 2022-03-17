@@ -120,7 +120,7 @@
 						"moduleId": "inline",
 						"id": "-1183997287_1544803905_inline_default",
 						"next": {
-							"targetId": "queue_exitpointqueue",
+							"targetId": "queue_entertainer_end",
 							"target": "2",
 							"source": "s3"
 						},
@@ -345,7 +345,7 @@
 						"moduleId": "inline1",
 						"id": "1950789816_1544803905_inline1_default",
 						"next": {
-							"targetId": "queue1_exitpointqueue",
+							"targetId": "queue1_entertainer_end",
 							"target": "2",
 							"source": "s3"
 						},

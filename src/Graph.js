@@ -24,13 +24,13 @@ function MyCustomGraph () {
 
 		const entertainers = {
 			'queue': {
-				"type": "queue_entertainer_end",
+				"type": "entertainer_end",
 				"name": "queue_entertainer_end",
 				"id": "queue_entertainer_end",
 				"isValid": true
 			}, 
 			'queue1': {
-				"type": "queue1_entertainer_end",
+				"type": "entertainer_end",
 				"name": "queue1_entertainer_end",
 				"id": "queue1_entertainer_end",
 				"isValid": true
@@ -79,13 +79,14 @@ function MyCustomGraph () {
 
 			const green = '#378805';
 			const red = '#FF0000';
+			const queeDefaultEnd = '#1e4620';
 
 			graph.addNode(node.id, 
 				{
 					label: `[${node.type}] ${node.name}`,
 					x, 
 					y,
-					color: node.isValid ? green : red,
+					color: node.isValid ? (node.type == 'entertainer_end' ? queeDefaultEnd : green) : red,
 					size
 				}
 			);
