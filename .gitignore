@@ -6,7 +6,10 @@
 .pnp.js
 .history/
 .idea/
+.vs
+/.vs
 .vs/
+/.vs/
 
 # testing
 /coverage

@@ -47,38 +47,52 @@ function MyCustomGraph () {
 			size: 30
 		})
 
-		let newRadius = 90;
+		//Default node size
+		let nodeSize = 15;
+		//let newRadius = 360 / nodes.length;//90;
+		let newRadius = 0;
+		let radiusChange = 0;
 		parsedNodes.forEach((node, idx) => {
+			//radiusChange = (idx / nodes.length);
+			radiusChange = nodes.length * (idx / nodes.length);
+			newRadius = 3 * nodeSize + radiusChange;
 
-			if (node.id.includes('_entrypoint')) {
-				newRadius += 5;
+			if (node.id && node.id.includes('_entrypoint')) {
+				//newRadius += nodeSize * nodes.length;
+				newRadius += radiusChange;
+			//	newRadius += (2 * (idx / nodes.length));//7;
 			}
 
-			if (node.id.includes('_exitpoint')) {
-				newRadius -= 5;
-			}
+			//const x = newRadius * Math.cos(Math.PI * 2 * (360 / nodes.length) )+idx;
+			//const y = newRadius * Math.sin(Math.PI * 2 * (360 / nodes.length) )+idx;
+			const x = newRadius * Math.cos(Math.PI * 2 * (idx / nodes.length) - radiusChange/360);
+			const y = newRadius * Math.sin(Math.PI * 2 * (idx / nodes.length) - radiusChange/360);
+			//const x = newRadius * Math.cos(Math.PI * 2 * (idx / nodes.length)) - radiusChange/360;
+			//const y = newRadius * Math.sin(Math.PI * 2 * (idx / nodes.length)) - radiusChange/360;
+			//const x = newRadius * Math.cos(Math.PI * 2 * (idx / nodes.length)) + idx;
+			//const y = newRadius * Math.sin(Math.PI * 2 * (idx / nodes.length)) + idx;
+			//const x = newRadius * Math.cos(Math.PI * 2 * (idx / nodes.length)) + idx / nodes.length;
+			//const y = newRadius * Math.sin(Math.PI * 2 * (idx / nodes.length)) + idx / nodes.length;
+			//const x = newRadius * Math.cos(Math.PI * 1.6 * idx / nodes.length );
+			//const y = newRadius * Math.sin(Math.PI * 1.6 * idx / nodes.length );
 
-			const x = newRadius * Math.cos(Math.PI * 1.6 * idx / nodes.length );
-			const y = newRadius * Math.sin(Math.PI * 1.6 * idx / nodes.length );
 
-			//Default node size
-			let size = 15;
-
-			if (isStartNode(node, connectors)) {
-				size = 30;
+			if (node.id && node.id.includes('_exitpoint')) {
+				newRadius -= radiusChange;
+				//	newRadius -= (2 * (idx / nodes.length));//7;
 			}
 
 			const green = '#378805';
 			const red = '#FF0000';
 			const queeDefaultEnd = '#1e4620';
 
-			graph.addNode(node.id, 
+			graph.addNode((node.id) ? node.id : "strangeNode" + idx,
 				{
 					label: `[${node.type}] ${node.name}`,
 					x, 
 					y,
 					color: node.isValid ? (node.type == 'entertainer_end' ? queeDefaultEnd : green) : red,
-					size
+					size: (isStartNode(node)) ? (2 * nodeSize) : nodeSize
 				}
 			);
 		});
