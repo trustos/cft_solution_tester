@@ -43,9 +43,20 @@ function MyCustomGraph () {
 			color: '#eb2e63',
 			size: 30
 		})
+
+		let newRadius = 30;
 		nodes.forEach((node, idx) => {
-			const x = 10 * Math.cos(Math.PI * 2 * idx / nodes.length );
-			const y = 10 * Math.sin(Math.PI * 2 * idx / nodes.length );
+
+			if (node.id.includes('_entrypoint')) {
+				newRadius += 5;
+			}
+
+			if (node.id.includes('_exitpoint')) {
+				newRadius -= 5;
+			}
+
+			const x = newRadius * Math.cos(Math.PI * 2 * idx / nodes.length );
+			const y = newRadius * Math.sin(Math.PI * 2 * idx / nodes.length );
 
 			graph.addNode(node.id, 
 				{
@@ -64,9 +75,15 @@ function MyCustomGraph () {
 		connectors.forEach((connector, idx) => {
 
 			//If target || source === point ? color = something else
-			const color = connector.target === 'terminate' ? '#eb2e63' : '#808080';
+			let color = connector.target === 'terminate' ? '#eb2e63' : '#808080';
+			let type = 'arrow';
 
-			graph.addEdge(connector.source, connector.target, { color, size: 5, label: connector.type, type: 'arrow' });
+			if (connector.type === 'level-to-level') {
+				color = '#FFA500';
+				type = 'line';
+			}
+
+			graph.addEdge(connector.source, connector.target, { color, size: 5, label: connector.type, type });
 		})
 		// console.log(graph);
 		// loadGraph(graph);
