@@ -43,22 +43,39 @@ export class Parser {
                 });
             }
 
-            nodes.push(node);
-
             //connectors creation 
             if (!module.exits) return;
 
-            module.exits.forEach(exit => {
+            node.exitNodes = [];
+
+            module.exits.forEach((exit, idx) => {
                 if (!exit.next) return;
 
                 let targetId = exit.next.targetId;
 
                 if (targetId) {
-                    let connector = this.createConnector(node.id, targetId, exit.exitDefaultTarget);
+                    //node.type = this.getModuleType(module);
+                    //node.name = this.getModuleName(module);
+                    //node.id = this.getModuleId(module);
+                    //node.isValid = module.isValid;
+                    const anExit = {
+                        "type": "anexit",
+                        "name": `${node.id}_${exit.text}`,
+                        //Could also be below
+                        //"name": `[${node.id}]_exit${idx}`,
+                        "id": `[${node.id}]_exit${idx}`,
+                        "isValid": node.isValid
+                    };
+
+                    let connector = this.createConnector(anExit.id, targetId, exit.exitDefaultTarget);
                         
                     connectors.push(connector);
+                    node.exitNodes.push(anExit);
                 }
             });
+
+            //Should already have exits attached to it, together with conector for each exit
+            nodes.push(node);
 
             // content type modules
             if (contenTypes.includes(node.type)) {
