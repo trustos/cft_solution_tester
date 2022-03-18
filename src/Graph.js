@@ -19,7 +19,7 @@ function MyCustomGraph () {
 
 	useEffect(() => {
 		const graph = sigma.getGraph();
-		const canvas = Array.from(demo);
+		const canvas = Array.from(allNodesKML);
 		const parser = new Parser(canvas);
 		const {nodes, connectors} = parser.parse();
 		const parsedNodes = nodes.map(node => node);
@@ -37,16 +37,17 @@ function MyCustomGraph () {
 		//let newRadius = 360 / nodes.length;//90;
 		let newRadius = 0;
 		let radiusChange = 0;
+		let radiusAddition = 0;
 		parsedNodes.forEach((node, idx) => {
 			//radiusChange = (idx / nodes.length);
 			radiusChange = nodes.length * (idx / nodes.length);
-			newRadius = 3 * nodeSize + radiusChange;
+			newRadius = 3 * nodeSize + radiusAddition + radiusChange;
 			//newRadius = 3 * nodeSize + radiusChange;
 
 			if (node.id && node.id.includes('_entrypoint')) {
 				//newRadius += nodeSize * nodes.length;
 				//newRadius += radiusChange;
-				newRadius += nodeSize/2;
+				radiusAddition = nodeSize / 2;
 			//	newRadius += (2 * (idx / nodes.length));//7;
 			}
 
@@ -65,7 +66,7 @@ function MyCustomGraph () {
 
 
 			if (node.id && node.id.includes('_exitpoint')) {
-				newRadius -= nodeSize / 2;
+				radiusAddition = 0;
 				//newRadius -= radiusChange;
 				//	newRadius -= (2 * (idx / nodes.length));//7;
 			}
@@ -77,12 +78,50 @@ function MyCustomGraph () {
 			graph.addNode((node.id) ? node.id : "strangeNode" + idx,
 				{
 					label: `[${node.type}] ${node.name}`,
-					x, 
+					x,
 					y,
 					color: node.isValid ? (node.type == 'entertainer_end' ? queeDefaultEnd : green) : red,
 					size: (isStartNode(node)) ? (2 * nodeSize) : nodeSize
 				}
 			);
+			if (node.exitNodes) {
+				//if (node.exitNodes.length > 1) {
+					const exitsCount = node.exitNodes.length;
+					node.exitNodes.forEach((exit, index) =>
+						//"type": "anexit",
+						//"name": `${node.id}_${exit.text}`,
+						////Could also be below
+						////"name": `[${node.id}]_exit${idx}`,
+						//"id": `[${node.id}]_exit${idx}`,
+						//"isValid": node.isValid
+						graph.addNode(exit.id,
+							{
+								label: exit.name,
+								//var x = 210 + 210 * Math.cos(2 * Math.PI * i / quantity);
+								//var y = 210 + 210 * Math.sin(2 * Math.PI * i / quantity);
+								x: x + index / exitsCount,
+								y: y + index / exitsCount,
+								//x: x * Math.cos(2 * Math.PI * index / exitsCount),
+								//y: y * Math.cos(2 * Math.PI * index / exitsCount),
+								//x: x + x * Math.cos(2 * Math.PI * index / exitsCount),
+								//y: y + y * Math.cos(2 * Math.PI * index / exitsCount),
+								color: exit.isValid ? green : red,
+								size: 1
+							})
+					);
+				//} else {
+				//	console.
+				//	graph.addNode(node.exitNodes[0].id,
+				//		{
+				//			label: node.exitNodes[0].name,
+				//			x,
+				//			y,
+				//			color: node.exitNodes[0].isValid ? green : red,
+				//			size: 1
+				//		});
+
+    //            }
+			}
 		});
 		
 		connectors.forEach((connector, idx) => {
