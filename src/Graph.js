@@ -39,17 +39,20 @@ function MyCustomGraph () {
 		let radiusChange = 0;
 		let radiusAddition = 0;
 		parsedNodes.forEach((node, idx) => {
-			//radiusChange = (idx / nodes.length);
-			radiusChange = nodes.length * (idx / nodes.length);
-			newRadius = 3 * nodeSize + radiusAddition + radiusChange;
-			//newRadius = 3 * nodeSize + radiusChange;
-
-			if (node.id && node.id.includes('_entrypoint')) {
+			if (node.id && node.id.includes('_entrypoint') || node.id && node.id.includes('-entrypoint')) {
 				//newRadius += nodeSize * nodes.length;
 				//newRadius += radiusChange;
 				radiusAddition = nodeSize / 2;
-			//	newRadius += (2 * (idx / nodes.length));//7;
+				//	newRadius += (2 * (idx / nodes.length));//7;
 			}
+
+			//radiusChange = (idx / nodes.length);
+			radiusChange = nodes.length * (idx / nodes.length);
+			newRadius = 3 * nodeSize + radiusAddition + radiusChange;
+			if (node.id && node.id.includes('_exitpoint') || node.id && node.id.includes('-exitpoint')) {
+				newRadius -= radiusAddition / 2;
+            }
+			//newRadius = 3 * nodeSize + radiusChange;
 
 			//const x = newRadius * Math.cos(Math.PI * 2 * (360 / nodes.length) )+idx;
 			//const y = newRadius * Math.sin(Math.PI * 2 * (360 / nodes.length) )+idx;
@@ -65,7 +68,7 @@ function MyCustomGraph () {
 			//const y = newRadius * Math.sin(Math.PI * 1.6 * idx / nodes.length );
 
 
-			if (node.id && node.id.includes('_exitpoint')) {
+			if (node.id && node.id.includes('_exitpoint') || node.id && node.id.includes('-exitpoint')) {
 				radiusAddition = 0;
 				//newRadius -= radiusChange;
 				//	newRadius -= (2 * (idx / nodes.length));//7;
@@ -86,29 +89,54 @@ function MyCustomGraph () {
 			);
 			if (node.exitNodes) {
 				//if (node.exitNodes.length > 1) {
-					const exitsCount = node.exitNodes.length;
-					node.exitNodes.forEach((exit, index) =>
-						//"type": "anexit",
-						//"name": `${node.id}_${exit.text}`,
-						////Could also be below
-						////"name": `[${node.id}]_exit${idx}`,
-						//"id": `[${node.id}]_exit${idx}`,
-						//"isValid": node.isValid
-						graph.addNode(exit.id,
-							{
-								label: exit.name,
-								//var x = 210 + 210 * Math.cos(2 * Math.PI * i / quantity);
-								//var y = 210 + 210 * Math.sin(2 * Math.PI * i / quantity);
-								x: x + index / exitsCount,
-								y: y + index / exitsCount,
-								//x: x * Math.cos(2 * Math.PI * index / exitsCount),
-								//y: y * Math.cos(2 * Math.PI * index / exitsCount),
-								//x: x + x * Math.cos(2 * Math.PI * index / exitsCount),
-								//y: y + y * Math.cos(2 * Math.PI * index / exitsCount),
-								color: exit.isValid ? green : red,
-								size: 1
-							})
-					);
+				const limitComponent = nodeSize / 10;
+				let theAddedX = -1;
+				let theAddedY = -1;
+				const exitsCount = node.exitNodes.length;
+				const shouldChangeDirection = (value, minimum, maximum) => value < minimum || value > maximum;
+				const minX = x - limitComponent;
+				const maxX = x + limitComponent;
+				const minY = y - limitComponent;
+				const maxY = y + limitComponent;
+				let theXvalue = x + limitComponent/20;
+				let theYvalue = y;
+				node.exitNodes.forEach((exit, index) => {
+					//"type": "anexit",
+					//"name": `${node.id}_${exit.text}`,
+					////Could also be below
+					////"name": `[${node.id}]_exit${idx}`,
+					//"id": `[${node.id}]_exit${idx}`,
+					//"isValid": node.isValid
+					graph.addNode(exit.id,
+						{
+							label: exit.name,
+							//var x = 210 + 210 * Math.cos(2 * Math.PI * i / quantity);
+							//var y = 210 + 210 * Math.sin(2 * Math.PI * i / quantity);
+							x: theXvalue,
+							y: theYvalue,
+							//x: x + index / exitsCount,
+							//y: y + index / exitsCount,
+							//x: x * Math.cos(2 * Math.PI * index / exitsCount),
+							//y: y * Math.cos(2 * Math.PI * index / exitsCount),
+							//x: x + x * Math.cos(2 * Math.PI * index / exitsCount),
+							//y: y + y * Math.cos(2 * Math.PI * index / exitsCount),
+							color: exit.isValid ? green : red,
+							size: nodeSize / 5
+						})
+					if (shouldChangeDirection((x + theAddedX), minX, maxX)) {
+						theAddedX = theAddedX * -1;
+						//theAddedY = 0;
+						//}
+						if (shouldChangeDirection((y + theAddedY), minY, maxY)) {
+							theAddedY = (theAddedY>0) ? -1 : 1;
+						}
+						theYvalue += theAddedY * Math.cos(2 * Math.PI + (index / limitComponent));
+					}
+					theXvalue += (theAddedX * Math.cos(2 * Math.PI + (index / limitComponent))) / 10;
+					theYvalue += (theAddedY * Math.cos(2 * Math.PI + (index / limitComponent))) / 10;
+				//	theXvalue += theAddedX;
+				//	theYvalue += theAddedY;
+				});
 				//} else {
 				//	console.
 				//	graph.addNode(node.exitNodes[0].id,
