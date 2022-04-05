@@ -60,10 +60,11 @@ export class Parser {
                     //node.isValid = module.isValid;
                     const anExit = {
                         "type": "anexit",
-                        "name": `${node.id}_${exit.text}`,
+                        "name": (targetId === 'terminate') ? `${node.id}_${exit.text}`:`${node.id}_${exit.text}=>${targetId}`,
                         //Could also be below
                         //"name": `[${node.id}]_exit${idx}`,
-                        "id": `[${node.id}]_exit${idx}`,
+                        "id": `[${node.id}]_${exit.text}`,
+                        //"id": `[${node.id}]_exit${idx}`,
                         "isValid": node.isValid
                     };
 
