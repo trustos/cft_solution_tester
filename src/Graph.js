@@ -24,11 +24,18 @@ function MyCustomGraph () {
 		const {nodes, connectors} = parser.parse();
 		const parsedNodes = nodes.map(node => node);
 
+		const green = '#378805';
+		const red = '#FF0000';
+		const queeDefaultEnd = '#1e4620';
+		const toTerminate = '#eb2e63';
+		const defaultConnectorColor = '#808080';
+		const levelToLevelColor = '#FFA500';
+
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
 			x: 0, 
 			y: 0,
-			color: '#eb2e63',
+			color: toTerminate,
 			size: 30
 		})
 
@@ -54,6 +61,10 @@ function MyCustomGraph () {
             }
 			//newRadius = 3 * nodeSize + radiusChange;
 
+			//if (node.exitNodes) {
+			//	newRadius -= nodeSize / 10;
+			//}
+
 			//const x = newRadius * Math.cos(Math.PI * 2 * (360 / nodes.length) )+idx;
 			//const y = newRadius * Math.sin(Math.PI * 2 * (360 / nodes.length) )+idx;
 			const x = newRadius * Math.cos(Math.PI * 2 * (idx / nodes.length) - radiusChange/360);
@@ -74,11 +85,7 @@ function MyCustomGraph () {
 				//	newRadius -= (2 * (idx / nodes.length));//7;
 			}
 
-			const green = '#378805';
-			const red = '#FF0000';
-			const queeDefaultEnd = '#1e4620';
-
-			graph.addNode((node.id) ? node.id : "strangeNode" + idx,
+			graph.addNode((node.id) ? node.id : "strangeNode_" + idx,
 				{
 					label: `[${node.type}] ${node.name}`,
 					x,
@@ -130,7 +137,7 @@ function MyCustomGraph () {
 						if (shouldChangeDirection((y + theAddedY), minY, maxY)) {
 							theAddedY = (theAddedY>0) ? -1 : 1;
 						}
-						theYvalue += theAddedY * Math.cos(2 * Math.PI + (index / limitComponent));
+						//theYvalue += (theAddedY * Math.cos(2 * Math.PI + (index / limitComponent)) ) / 10;
 					}
 					theXvalue += (theAddedX * Math.cos(2 * Math.PI + (index / limitComponent))) / 10;
 					theYvalue += (theAddedY * Math.cos(2 * Math.PI + (index / limitComponent))) / 10;
@@ -155,11 +162,11 @@ function MyCustomGraph () {
 		connectors.forEach((connector, idx) => {
 
 			//If target || source === point ? color = something else
-			let color = connector.target === 'terminate' ? '#eb2e63' : '#808080';
+			let color = connector.target === 'terminate' ? toTerminate : defaultConnectorColor;
 			let type = 'arrow';
 
 			if (connector.type === 'level-to-level') {
-				color = '#FFA500';
+				color = levelToLevelColor;
 				type = 'line';
 			}
 
