@@ -24,6 +24,8 @@ function MyCustomGraph () {
 		const {nodes, connectors} = parser.parse();
 		const parsedNodes = nodes.map(node => node);
 
+		const searcableNodes = {};
+
 		const green = '#378805';
 		const red = '#FF0000';
 		const queeDefaultEnd = '#1e4620';
@@ -172,6 +174,27 @@ function MyCustomGraph () {
 
 			graph.addEdge(connector.source, connector.target, { color, size: 5, label: connector.type, type });
 		});
+
+		/*
+		const parsedNodes = nodes.map(node => node);
+		const searcableNodes = {};
+		*/
+		parsedNodes.forEach((node) => {
+			if (node.type && !searcableNodes[node.type]) {
+				searcableNodes[node.type] = [];
+			}//ensure every node-type available in searchableNodes
+			searcableNodes[node.type].push({ "id":node.id, "moduleData":node });
+		});
+
+		/**
+		 * TODO: find and console-log all nodes with:
+		 * 1. empty sound-file attributes
+		 * 2. empty queue_key attributes
+		 * 3. empty service-variable attributes
+		 * 4. at least one exit pointing to: TERMINATE, Queue_entertainer_end
+		 * 5. all invalid modules
+		 **/
+
 	}, []);
 	
 	return <></>;
