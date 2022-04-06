@@ -68,14 +68,14 @@ function MyCustomGraph () {
 				if (node.exitNodes) {
 					let pointsTerminate = false;
 					node.exitNodes.forEach(exit => {
-						if (!exit.name.includes("=>") ||
-							exit.name.endsWith("entertainer_end")
+						if (exit.name && (!exit.name.includes("=>") ||
+							exit.name.endsWith("entertainer_end") )
 						) pointsTerminate = true;
 					});
 					pointsTerminate && searchResults["at least one exit pointing to_TERMINATE_OR_Queue_entertainer_end"].push(node);
 				}
 				if (node.properties) {
-					if (node.properties.has("src") && !node.properties.get("src")) searchResults["empty sound-file attributes"].push(node);
+					if (node.properties.has("src") && node.type != "time" && !node.properties.get("src")) searchResults["empty sound-file attributes"].push(node);
 					if (node.properties.has("queue_key") && !node.properties.get("queue_key")) searchResults["empty queue_key attributes"].push(node);
 					if (node.properties.has("propertyKey") && !node.properties.get("propertyKey")) searchResults["empty service-variable attributes"].push(node);
 				}
