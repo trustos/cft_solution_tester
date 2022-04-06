@@ -21,10 +21,8 @@ function MyCustomGraph () {
 		const graph = sigma.getGraph();
 		const canvas = Array.from(allNodesKML);
 		const parser = new Parser(canvas);
-		const {nodes, connectors} = parser.parse();
+		const { nodes, connectors } = parser.parse();
 		const parsedNodes = nodes.map(node => node);
-
-		const searcableNodes = {};
 
 		const green = '#378805';
 		const red = '#FF0000';
@@ -35,7 +33,7 @@ function MyCustomGraph () {
 
 		graph.addNode('terminate', {
 			label: 'TERMINATE',
-			x: 0, 
+			x: 0,
 			y: 0,
 			color: toTerminate,
 			size: 30
@@ -47,6 +45,56 @@ function MyCustomGraph () {
 		let newRadius = 0;
 		let radiusChange = 0;
 		let radiusAddition = 0;
+
+		let searchableNodes = {};
+
+		let searchResults = {
+			"empty sound-file attributes": [],
+			"empty queue_key attributes": [],
+			"empty service-variable attributes": [],
+			"at least one exit pointing to_TERMINATE_OR_Queue_entertainer_end": [],
+			"all invalid modules": []
+		};
+
+		parsedNodes.forEach((node, index) => {
+			if (node.type) {
+				if (!searchableNodes[node.type]) {
+					searchableNodes[node.type] = [];
+					//console.log('searchableNodes['+node.type+']:'+searchableNodes[node.type]);
+				}//ensure every node-type available in searchableNodes
+				searchableNodes[node.type].push({ "id": (node.id) ? node.id : "strangeNode" + index, "moduleData": node });
+				//node.properties && console.log(node.properties);
+				if (!node.isValid) searchResults["all invalid modules"].push(node);
+				if (node.exitNodes) {
+					let pointsTerminate = false;
+					node.exitNodes.forEach(exit => {
+						if (!exit.name.includes("=>") ||
+							exit.name.endsWith("entertainer_end")
+						) pointsTerminate = true;
+					});
+					pointsTerminate && searchResults["at least one exit pointing to_TERMINATE_OR_Queue_entertainer_end"].push(node);
+				}
+				if (node.properties) {
+					if (node.properties.has("src") && !node.properties.get("src")) searchResults["empty sound-file attributes"].push(node);
+					if (node.properties.has("queue_key") && !node.properties.get("queue_key")) searchResults["empty queue_key attributes"].push(node);
+					if (node.properties.has("propertyKey") && !node.properties.get("propertyKey")) searchResults["empty service-variable attributes"].push(node);
+				}
+			}//if to parse node
+		});
+
+		console.log(searchableNodes);
+		console.log('Default Search results')
+		console.log(searchResults);
+
+		/**
+		 * TODO: find and console-log all nodes with:
+		 * 1. empty sound-file attributes
+		 * 2. empty queue_key attributes
+		 * 3. empty service-variable attributes
+		 * 4. at least one exit pointing to: TERMINATE, Queue_entertainer_end
+		 * 5. all invalid modules
+		 **/
+
 		parsedNodes.forEach((node, idx) => {
 			if (node.id && node.id.includes('_entrypoint') || node.id && node.id.includes('-entrypoint')) {
 				//newRadius += nodeSize * nodes.length;
@@ -87,7 +135,7 @@ function MyCustomGraph () {
 				//	newRadius -= (2 * (idx / nodes.length));//7;
 			}
 
-			graph.addNode((node.id) ? node.id : "strangeNode_" + idx,
+			node.id && graph.addNode((node.id) ? node.id : "strangeNode_" + idx,
 				{
 					label: `[${node.type}] ${node.name}`,
 					x,
@@ -174,26 +222,6 @@ function MyCustomGraph () {
 
 			graph.addEdge(connector.source, connector.target, { color, size: 5, label: connector.type, type });
 		});
-
-		/*
-		const parsedNodes = nodes.map(node => node);
-		const searcableNodes = {};
-		*/
-		parsedNodes.forEach((node) => {
-			if (node.type && !searcableNodes[node.type]) {
-				searcableNodes[node.type] = [];
-			}//ensure every node-type available in searchableNodes
-			searcableNodes[node.type].push({ "id":node.id, "moduleData":node });
-		});
-
-		/**
-		 * TODO: find and console-log all nodes with:
-		 * 1. empty sound-file attributes
-		 * 2. empty queue_key attributes
-		 * 3. empty service-variable attributes
-		 * 4. at least one exit pointing to: TERMINATE, Queue_entertainer_end
-		 * 5. all invalid modules
-		 **/
 
 	}, []);
 	
